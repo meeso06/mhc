@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>편의시설 제보</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>편의시설 제보</h1>
+
+      <form method="POST" enctype="multipart/form-data">
+        <select name="building" required>
+          <option value="">건물 선택</option>
+          {% for f in facilities %}
+          <option value="{{ f.building_name }}">{{ f.building_name }}</option>
+          {% endfor %}
+        </select>
+
+        <!-- 하나로 통일된 제보 설명 입력창 -->
+        <textarea
+          name="detail"
+          rows="5"
+          placeholder="제보 내용을 입력해주세요 (예: 경사로 없음, 화장실 고장 등)"
+          required
+        ></textarea>
+
+        <!-- 사진 업로드 -->
+        <input type="file" name="photo" accept="image/*" />
+
+        <button type="submit">제보 제출</button>
+      </form>
+
+      <a href="/" class="report-button">홈으로</a>
+    </div>
+  </body>
+</html>

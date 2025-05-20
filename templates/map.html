@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8782980c641ca69fd5e74172ab67655a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8782980c641ca69fd5e74172ab67655a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8782980c641ca69fd5e74172ab67655a = L.map(
+                "map_8782980c641ca69fd5e74172ab67655a",
+                {
+                    center: [37.588, 126.9935],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 17,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1595ef3f3beba7d3bdbc0c4624897762 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1595ef3f3beba7d3bdbc0c4624897762.addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var marker_18ff3b839f20899a99a526a6a0e259cd = L.marker(
+                [37.586874, 126.99536],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_03ebe8866513cbe33c6149b190333348 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e19fe96c58407d986e9dd239ad2a82c9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1284d43a4649f096fee03f4fc64eb84f = $(`<div id="html_1284d43a4649f096fee03f4fc64eb84f" style="width: 100.0%; height: 100.0%;">         <b>국제관</b><br>         장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_e19fe96c58407d986e9dd239ad2a82c9.setContent(html_1284d43a4649f096fee03f4fc64eb84f);
+            
+        
+
+        marker_18ff3b839f20899a99a526a6a0e259cd.bindPopup(popup_e19fe96c58407d986e9dd239ad2a82c9)
+        ;
+
+        
+    
+    
+                marker_18ff3b839f20899a99a526a6a0e259cd.setIcon(icon_03ebe8866513cbe33c6149b190333348);
+            
+    
+            var marker_d8cfb9147ebe484f7e7e928da6a07bbc = L.marker(
+                [37.587469, 126.994523],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_c7a8d72adced4a6afaf0e6175abff87b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b416207c77f05eac5242d67288dc828 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0838e3097053d4d14e10863608271631 = $(`<div id="html_0838e3097053d4d14e10863608271631" style="width: 100.0%; height: 100.0%;">         <b>600주년기념관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_0b416207c77f05eac5242d67288dc828.setContent(html_0838e3097053d4d14e10863608271631);
+            
+        
+
+        marker_d8cfb9147ebe484f7e7e928da6a07bbc.bindPopup(popup_0b416207c77f05eac5242d67288dc828)
+        ;
+
+        
+    
+    
+                marker_d8cfb9147ebe484f7e7e928da6a07bbc.setIcon(icon_c7a8d72adced4a6afaf0e6175abff87b);
+            
+    
+            var marker_6d5ffbc4cd77060916789f9c7fd4adcb = L.marker(
+                [37.587422, 126.993216],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_12b8ade84e2f8bfce7097c322664f392 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cb372873f4873d236ec1300509a08b8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f1242ccd510ee05d17ee538a8a444aa = $(`<div id="html_6f1242ccd510ee05d17ee538a8a444aa" style="width: 100.0%; height: 100.0%;">         <b>학생회관</b><br>         경사로         </div>`)[0];
+                popup_4cb372873f4873d236ec1300509a08b8.setContent(html_6f1242ccd510ee05d17ee538a8a444aa);
+            
+        
+
+        marker_6d5ffbc4cd77060916789f9c7fd4adcb.bindPopup(popup_4cb372873f4873d236ec1300509a08b8)
+        ;
+
+        
+    
+    
+                marker_6d5ffbc4cd77060916789f9c7fd4adcb.setIcon(icon_12b8ade84e2f8bfce7097c322664f392);
+            
+    
+            var marker_9a8eacbdac71a6d64f6872cdc9a96f32 = L.marker(
+                [37.588307, 126.994159],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_2965e1a1c5058f0a73e017cb8bebd5c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d71c16947de8ade1d93509d45edd2068 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_846b2ec3aed8fd313c011e063c4143a6 = $(`<div id="html_846b2ec3aed8fd313c011e063c4143a6" style="width: 100.0%; height: 100.0%;">         <b>중앙학술정보관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_d71c16947de8ade1d93509d45edd2068.setContent(html_846b2ec3aed8fd313c011e063c4143a6);
+            
+        
+
+        marker_9a8eacbdac71a6d64f6872cdc9a96f32.bindPopup(popup_d71c16947de8ade1d93509d45edd2068)
+        ;
+
+        
+    
+    
+                marker_9a8eacbdac71a6d64f6872cdc9a96f32.setIcon(icon_2965e1a1c5058f0a73e017cb8bebd5c9);
+            
+    
+            var marker_6305a3af6b9285f383dc05faefc4f1dc = L.marker(
+                [37.588757, 126.993186],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_32575db2bdcafd5c59f8f1cd1fc04138 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e378c5f5df02e679219d875fed93b402 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_132487f0c2c1aca68c4cb907b83531a3 = $(`<div id="html_132487f0c2c1aca68c4cb907b83531a3" style="width: 100.0%; height: 100.0%;">         <b>교수회관</b><br>         경사로, 장애인 화장실, 핸드레일         </div>`)[0];
+                popup_e378c5f5df02e679219d875fed93b402.setContent(html_132487f0c2c1aca68c4cb907b83531a3);
+            
+        
+
+        marker_6305a3af6b9285f383dc05faefc4f1dc.bindPopup(popup_e378c5f5df02e679219d875fed93b402)
+        ;
+
+        
+    
+    
+                marker_6305a3af6b9285f383dc05faefc4f1dc.setIcon(icon_32575db2bdcafd5c59f8f1cd1fc04138);
+            
+    
+            var marker_e85c6c1943d829e9a2b48969b79d9f36 = L.marker(
+                [37.588744, 126.992595],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_52f78e272b5391be25d7e4c32f3c6567 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f7c69dd2635084224625893fd081db6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7c9c6342606914524b9522e84091e41 = $(`<div id="html_f7c9c6342606914524b9522e84091e41" style="width: 100.0%; height: 100.0%;">         <b>경영관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_2f7c69dd2635084224625893fd081db6.setContent(html_f7c9c6342606914524b9522e84091e41);
+            
+        
+
+        marker_e85c6c1943d829e9a2b48969b79d9f36.bindPopup(popup_2f7c69dd2635084224625893fd081db6)
+        ;
+
+        
+    
+    
+                marker_e85c6c1943d829e9a2b48969b79d9f36.setIcon(icon_52f78e272b5391be25d7e4c32f3c6567);
+            
+    
+            var marker_09bc4278820a249f9feca34fff7e6b70 = L.marker(
+                [37.58904, 126.992249],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_a6957a1976f88340cc8b026fb869765a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_157cc3138af15757247da8187e11309d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1a8cae0d3c1789b418376631d7fee1e6 = $(`<div id="html_1a8cae0d3c1789b418376631d7fee1e6" style="width: 100.0%; height: 100.0%;">         <b>다산경제관</b><br>         경사로, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_157cc3138af15757247da8187e11309d.setContent(html_1a8cae0d3c1789b418376631d7fee1e6);
+            
+        
+
+        marker_09bc4278820a249f9feca34fff7e6b70.bindPopup(popup_157cc3138af15757247da8187e11309d)
+        ;
+
+        
+    
+    
+                marker_09bc4278820a249f9feca34fff7e6b70.setIcon(icon_a6957a1976f88340cc8b026fb869765a);
+            
+    
+            var marker_7c7b1a8bd66243af7e7d22b1f98b3be6 = L.marker(
+                [37.58835, 126.991966],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_c2f4d524ec767f3ddcc0e9292fcc3fc5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1f57b598b5efeecbe4c7e6e3718c002 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_761817901fccc8d7d06350722edd655b = $(`<div id="html_761817901fccc8d7d06350722edd655b" style="width: 100.0%; height: 100.0%;">         <b>호암관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_a1f57b598b5efeecbe4c7e6e3718c002.setContent(html_761817901fccc8d7d06350722edd655b);
+            
+        
+
+        marker_7c7b1a8bd66243af7e7d22b1f98b3be6.bindPopup(popup_a1f57b598b5efeecbe4c7e6e3718c002)
+        ;
+
+        
+    
+    
+                marker_7c7b1a8bd66243af7e7d22b1f98b3be6.setIcon(icon_c2f4d524ec767f3ddcc0e9292fcc3fc5);
+            
+    
+            var marker_aa549eae5113a5b9580079ffde356e3c = L.marker(
+                [37.589073, 126.99159],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_3e571a498fa4cc1616654a195d91ed17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3df4a44165d978ca9a31723764e1b745 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99abc4f1b7a8f89b7547df1c9f06a54c = $(`<div id="html_99abc4f1b7a8f89b7547df1c9f06a54c" style="width: 100.0%; height: 100.0%;">         <b>퇴계인문관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_3df4a44165d978ca9a31723764e1b745.setContent(html_99abc4f1b7a8f89b7547df1c9f06a54c);
+            
+        
+
+        marker_aa549eae5113a5b9580079ffde356e3c.bindPopup(popup_3df4a44165d978ca9a31723764e1b745)
+        ;
+
+        
+    
+    
+                marker_aa549eae5113a5b9580079ffde356e3c.setIcon(icon_3e571a498fa4cc1616654a195d91ed17);
+            
+    
+            var marker_d021443331e8037c1c512c18f7fa319f = L.marker(
+                [37.587817, 126.990931],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_659f5b7dd2fe719523ce408168d3b115 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49e5bc6852d797c6b7eba3d08a9d3959 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6438a7f7c91ffcddc423547fef607cc8 = $(`<div id="html_6438a7f7c91ffcddc423547fef607cc8" style="width: 100.0%; height: 100.0%;">         <b>수선관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_49e5bc6852d797c6b7eba3d08a9d3959.setContent(html_6438a7f7c91ffcddc423547fef607cc8);
+            
+        
+
+        marker_d021443331e8037c1c512c18f7fa319f.bindPopup(popup_49e5bc6852d797c6b7eba3d08a9d3959)
+        ;
+
+        
+    
+    
+                marker_d021443331e8037c1c512c18f7fa319f.setIcon(icon_659f5b7dd2fe719523ce408168d3b115);
+            
+    
+            var marker_d5f73d92d76fe9b2cb39afe511bb1d00 = L.marker(
+                [37.587456, 126.990473],
+                {
+}
+            ).addTo(map_8782980c641ca69fd5e74172ab67655a);
+        
+    
+            var icon_8bd83740081db958361df5c4812c2efc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e507897ddda0c832565dbdeb14facf65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94ead7af859c0e2da6c3085b91817c42 = $(`<div id="html_94ead7af859c0e2da6c3085b91817c42" style="width: 100.0%; height: 100.0%;">         <b>법학관</b><br>         경사로, 장애인 화장실, 장애인 엘리베이터, 핸드레일         </div>`)[0];
+                popup_e507897ddda0c832565dbdeb14facf65.setContent(html_94ead7af859c0e2da6c3085b91817c42);
+            
+        
+
+        marker_d5f73d92d76fe9b2cb39afe511bb1d00.bindPopup(popup_e507897ddda0c832565dbdeb14facf65)
+        ;
+
+        
+    
+    
+                marker_d5f73d92d76fe9b2cb39afe511bb1d00.setIcon(icon_8bd83740081db958361df5c4812c2efc);
+            
+</script>
+</html>

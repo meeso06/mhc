@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>성균관대 캠퍼스 편의시설 정보</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>성균관대 캠퍼스<br />편의시설 정보</h1>
+      <script>
+        function validateForm() {
+          const building = document.querySelector(
+            'select[name="building"]'
+          ).value;
+          const anyChecked = [
+            ...document.querySelectorAll('input[type="checkbox"]'),
+          ].some((cb) => cb.checked);
+
+          // if (!building && !anyChecked) {
+          //   alert("검색할 건물 또는 편의시설을 선택하세요!");
+          //   return false;
+          // }
+          return true;
+        }
+      </script>
+
+      <form method="GET" action="/" onsubmit="return validateForm()">
+        <select name="building">
+          <option value="">건물 선택</option>
+          {% for f in facilities %}
+          <option value="{{ f.building_name }}">{{ f.building_name }}</option>
+          {% endfor %}
+        </select>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="ramp" /> 경사로</label>
+          <label><input type="checkbox" name="toilet" /> 장애인 화장실</label>
+          <label
+            ><input type="checkbox" name="elevator" /> 장애인 엘리베이터</label
+          >
+          <label><input type="checkbox" name="handrail" /> 핸드레일</label>
+        </div>
+
+        <button type="submit">검색</button>
+      </form>
+
+      {% if result %}
+      <div id="result-box" class="result-box">
+        <!-- <button
+          onclick="document.getElementById('result-box').style.display='none'"
+          class="close-btn"
+        >
+          x
+        </button> -->
+        <h3>{{ result.building }}의 편의시설 정보</h3>
+
+        {% for key, value in result.results.items() %}
+        <p>
+          {% if value %} ✅ {{ key | facility_name }} 있음 {% else %} ❌ {{ key
+          | facility_name }} 없음 {% endif %}
+        </p>
+        {% endfor %}
+      </div>
+
+      {% endif %}
+
+      <div class="map-preview">
+        <a href="/map">
+          <img src="/static/map_placeholder.png" alt="지도 미리보기" />
+        </a>
+      </div>
+
+      <a href="/report" class="report-button">제보하기</a>
+    </div>
+  </body>
+</html>

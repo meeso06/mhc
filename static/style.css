@@ -1,0 +1,134 @@
+body {
+  background-color: #e6f1e6;
+  font-family: "Apple SD Gothic Neo", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+  max-width: 400px;
+  margin: auto;
+}
+
+h1 {
+  color: #1e4d2b;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+button,
+.report-button {
+  background-color: #1e4d2b;
+  color: white;
+  padding: 12px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.map-preview img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #1e4d2b;
+  border-radius: 8px;
+}
+
+.alert {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
+}
+
+.result-box {
+  background-color: #f0f8f0;
+  border: 1px solid #aad4aa;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 15px;
+  position: relative; /* 닫기 버튼 위치 기준점 */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.result-box p {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 14.5px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-header h3 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  word-break: keep-all;
+  flex-grow: 1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #444;
+  padding: 0;
+  line-height: 1;
+}
+
+.ok {
+  color: green;
+  margin-right: 5px;
+}
+
+.no {
+  color: crimson;
+  margin-right: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 15px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  resize: vertical;
+  font-family: inherit;
+}
