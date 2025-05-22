@@ -70,6 +70,8 @@ def index():
     }
 
     result = None
+    photo_list = []
+
     if selected_building:
         building_data = data[data['building_name'] == selected_building]
         if not building_data.empty:
@@ -81,7 +83,18 @@ def index():
             for key, checked in selected_filters.items():
                 if checked is not None:
                     result['results'][key] = bool(building_info[key])
-    return render_template('index.html', facilities=data.to_dict(orient='records'), result=result)
+
+            # 📸 사진 파일 리스트 구성
+            folder = 'static/building_photos'
+            photo_list = sorted([
+                f for f in os.listdir(folder)
+                if f.startswith(selected_building)
+            ])
+
+    return render_template('index.html',
+                           facilities=data.to_dict(orient='records'),
+                           result=result,
+                           photo_list=photo_list)
 
 @app.route('/map')
 def map_view():
@@ -119,5 +132,5 @@ def report():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
 

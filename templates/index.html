@@ -51,9 +51,16 @@
           onclick="document.getElementById('result-box').style.display='none'"
           class="close-btn"
         >
-          x
+          ×
         </button> -->
-        <h3>{{ result.building }}의 편의시설 정보</h3>
+        <div class="result-header">
+          <h3>{{ result.building }}의 편의시설 정보</h3>
+          {% if photo_list %}
+          <button onclick="showPhotos()" class="photo-btn" title="사진 보기">
+            📷
+          </button>
+          {% endif %}
+        </div>
 
         {% for key, value in result.results.items() %}
         <p>
@@ -62,8 +69,26 @@
         </p>
         {% endfor %}
       </div>
-
       {% endif %}
+
+      <div id="photo-modal" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close-btn" onclick="hidePhotos()">×</span>
+
+          <!-- 슬라이드 이미지 -->
+          <img
+            id="slide-image"
+            src=""
+            style="max-width: 100%; max-height: 400px"
+          />
+
+          <!-- 좌우 버튼 -->
+          <div class="slide-controls">
+            <button onclick="prevPhoto()">◀️</button>
+            <button onclick="nextPhoto()">▶️</button>
+          </div>
+        </div>
+      </div>
 
       <div class="map-preview">
         <a href="/map">
@@ -74,4 +99,43 @@
       <a href="/report" class="report-button">제보하기</a>
     </div>
   </body>
+
+  <script>
+    function showPhotos() {
+      document.getElementById("photo-modal").style.display = "block";
+    }
+    function hidePhotos() {
+      document.getElementById("photo-modal").style.display = "none";
+    }
+  </script>
+  <script>
+    const photos = [
+      {% for photo in photo_list %}
+        "{{ url_for('static', filename='building_photos/' ~ photo) }}"{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ];
+    let currentIndex = 0;
+
+    function showPhotos() {
+      if (photos.length > 0) {
+        currentIndex = 0;
+        document.getElementById("slide-image").src = photos[currentIndex];
+        document.getElementById("photo-modal").style.display = "block";
+      }
+    }
+
+    function hidePhotos() {
+      document.getElementById("photo-modal").style.display = "none";
+    }
+
+    function nextPhoto() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      document.getElementById("slide-image").src = photos[currentIndex];
+    }
+
+    function prevPhoto() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      document.getElementById("slide-image").src = photos[currentIndex];
+    }
+  </script>
 </html>
